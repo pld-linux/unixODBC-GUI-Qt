@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=ODBC Data Source Administrator
+Exec=ODBCManageDataSourcesQ4
+Icon=unixODBC
+Type=Application
+Terminal=false
+Categories=Qt;System;
+# vi: encoding=utf-8

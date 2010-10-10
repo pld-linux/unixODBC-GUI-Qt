@@ -1,0 +1,31 @@
+--- unixODBC-GUI-Qt/qt.m4.orig	2010-10-10 10:52:19.000000000 +0200
++++ unixODBC-GUI-Qt/qt.m4	2010-10-10 15:38:13.647735177 +0200
+@@ -17,7 +17,7 @@
+   qt_dir_include=""
+   qt_dir_lib=""
+   qt_dir_bin=""
+-  qt_libs="-lQtGui -lQtCore -lQtAssistantClient -lQtNetwork"
++  qt_libs="-lQtGui -lQtCore -lQtNetwork"
+   MOC=""
+   UIC=""
+ 
+@@ -116,7 +116,7 @@
+ 
+   AC_SUBST(MOC)
+   AC_SUBST(UIC)
+-  QT_CXXFLAGS="-I$qt_dir_include -I$qt_dir_include/QtCore -I$qt_dir_include/QtGui -I$qt_dir_include/QtAssistant -I$qt_dir_include/QtNetwork"
++  QT_CXXFLAGS="-I$qt_dir_include -I$qt_dir_include/QtCore -I$qt_dir_include/QtGui -I$qt_dir_include/QtNetwork"
+   AC_SUBST(QT_CXXFLAGS)
+   QT_LDFLAGS="-L$qt_dir_lib"
+   AC_SUBST(QT_LDFLAGS)
+--- unixODBC-GUI-Qt/ODBCTestQ4/OdbcHandle.h.orig	2010-10-10 10:52:18.000000000 +0200
++++ unixODBC-GUI-Qt/ODBCTestQ4/OdbcHandle.h	2010-10-10 17:34:56.803734339 +0200
+@@ -106,7 +106,7 @@
+ {
+ public:
+ 	OdbcHandle( int t, SQLHANDLE h, QList<OdbcHandle*> &list );
+-	OdbcHandle( int t, SQLHANDLE h, QString desc = NULL, SQLHANDLE stmt = SQL_NULL_HANDLE );
++	OdbcHandle( int t, SQLHANDLE h, QString desc = "", SQLHANDLE stmt = SQL_NULL_HANDLE );
+ 	OdbcHandle( OdbcHandle &e );
+ 	~OdbcHandle();
+ 	char * toStr( char * str );
