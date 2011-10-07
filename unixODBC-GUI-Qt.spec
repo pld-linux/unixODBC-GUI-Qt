@@ -14,6 +14,7 @@ Source2:	ODBCDataManagerQ4.desktop
 Source3:	ODBCManageDataSourcesQ4.desktop
 Source4:	ODBCTestQ4.desktop
 Patch0:		%{name}-qt4.patch
+Patch1:		link.patch
 URL:		http://sourceforge.net/projects/unixodbc-gui-qt/
 BuildRequires:	QtGui-devel >= 4.0
 BuildRequires:	QtNetwork-devel >= 4.0
@@ -44,6 +45,7 @@ DataManagerII, ODBCConfig, odbctest.
 %prep
 %setup -q -n %{name}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}

@@ -1,0 +1,12 @@
+--- unixODBC-GUI-Qt/gtrtstQ4/Makefile.am.orig	2010-11-05 22:56:52.449253800 +0100
++++ unixODBC-GUI-Qt/gtrtstQ4/Makefile.am	2010-11-05 22:58:26.828448797 +0100
+@@ -20,6 +20,9 @@ libgtrtstQ4_la_SOURCES = \
+ 	szLogPrintf.cpp \
+ 	szMessageBox.cpp
+ 
++libgtrtstQ4_la_LIBADD = \
++		-lQtGui
++
+ EXTRA_DIST = \
+ 	README
+ 
